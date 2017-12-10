@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+ ~ @author Interactiv4 Team
+ ~ @copyright Copyright (c) 2017 Interactiv4 (https://www.interactiv4.com)
+ ~ @package Interactiv4_Post
+ -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="POST" url="/V1/interactiv4_entities">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route method="PUT" url="/V1/interactiv4_entities">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/interactiv4_entities/:entityId">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/interactiv4_entities/:attributeCode/:value">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="DELETE" url="/V1/interactiv4_entities">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="delete"/>
+        <resources>
+            <resource ref="Interactiv4_Post::manage"/>
+        </resources>
+    </route>
+    <route method="DELETE" url="/V1/interactiv4_entities:entityId">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Interactiv4_Post::manage"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/interactiv4_entities">
+        <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymouns"/>
+        </resources>
+    </route>
+</routes>

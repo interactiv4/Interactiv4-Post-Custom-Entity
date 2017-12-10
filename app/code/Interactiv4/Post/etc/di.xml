@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+ ~ @author Interactiv4 Team
+ ~ @copyright Copyright (c) 2017 Interactiv4 (https://www.interactiv4.com)
+ ~ @package Interactiv4_Post
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Interactiv4\Post\Api\Data\EntityInterface" type="Interactiv4\Post\Model\Entity"/>
+    <preference for="Interactiv4\Post\Api\Data\EntitySearchResultsInterface" type="Interactiv4\Post\Model\EntitySearchResults"/>
+    <preference for="Interactiv4\Post\Api\EntityRepositoryInterface" type="Interactiv4\Post\Model\EntityRepository"/>
+</config>

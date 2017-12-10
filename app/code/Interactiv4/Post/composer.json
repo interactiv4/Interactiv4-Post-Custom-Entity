@@ -1,0 +1,17 @@
+{
+  "name": "interactiv4/post",
+  "description": "Example Module of Custom Entity",
+  "require": {
+    "php": "~7.0.0",
+    "magento/magento-composer-installer": "*"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Interactiv4\\Post\\": ""
+    }
+  }
+}
