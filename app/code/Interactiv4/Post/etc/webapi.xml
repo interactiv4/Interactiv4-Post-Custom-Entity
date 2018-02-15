@@ -23,7 +23,7 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
-    <route method="GET" url="/V1/interactiv4_entities/:attributeCode/:value">
+    <route method="GET" url="/V1/interactiv4_entities/:value/:attributeCode/">
         <service class="Interactiv4\Post\Api\EntityRepositoryInterface" method="get"/>
         <resources>
             <resource ref="anonymous"/>

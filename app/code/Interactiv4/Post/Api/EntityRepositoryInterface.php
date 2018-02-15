@@ -30,18 +30,20 @@ interface EntityRepositoryInterface
     /**
      * Retrieve entity by attribute
      *
-     * @param $attributeCode
      * @param $value
-     * @return \Interactiv4\Post\Api\Data\EntityInterface|boolean
+     * @param string|null $attributeCode
+     * @return \Interactiv4\Post\Api\Data\EntityInterface
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
-    public function get($attributeCode, $value);
+    public function get($value, $attributeCode);
 
     /**
      * Delete $entity.
      *
      * @param \Interactiv4\Post\Api\Data\EntityInterface $entity
      * @return boolean
-     * @throws \Magento\Framework\Exception\CouldNotSaveException|\Magento\Framework\Exception\StateException
+     * @throws \Magento\Framework\Exception\CouldNotSaveException
+     * @throws \Magento\Framework\Exception\CouldNotDeleteException
      */
     public function delete(\Interactiv4\Post\Api\Data\EntityInterface $entity);
 
@@ -50,6 +52,9 @@ interface EntityRepositoryInterface
      *
      * @param int $entityId
      * @return boolean
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     * @throws \Magento\Framework\Exception\CouldNotSaveException
+     * @throws \Magento\Framework\Exception\CouldNotDeleteException
      */
     public function deleteById($entityId);
 
