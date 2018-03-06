@@ -44,9 +44,9 @@ class InstallSchema implements InstallSchemaInterface
             'Id'
         )->addColumn(
             EntityInterface::NAME,
-            Table::TYPE_INTEGER,
-            null,
-            ['unsigned' => true, 'nullable' => true],
+            Table::TYPE_TEXT,
+            255,
+            ['nullable' => true],
             'Name'
         )->addColumn(
             EntityInterface::DESCRIPTION,
